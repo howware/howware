@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.memory/
+*.pdf
+*.sqlite
+.claude/

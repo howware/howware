@@ -1,0 +1,9 @@
+{
+  "seed_version": "1",
+  "predicates": [
+    {"id": "amount", "value_type": "integer", "unit": "MXN_cent", "cardinality": "one", "label": "Amount",
+     "description": "Signed amount in cents (replace the unit with your currency)"}
+  ],
+  "entities": [],
+  "high_volume_event_types": ["item"]
+}

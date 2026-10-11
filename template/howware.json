@@ -1,0 +1,20 @@
+{
+  "howware": "0.1",
+  "name": "__NAME__",
+  "version": "0.1.0",
+  "description": "__DESCRIPTION__",
+  "license": "Apache-2.0",
+  "languages": ["en"],
+  "hosts": ["claude-code", "codex"],
+  "skill": "skill/__NAME__",
+  "requires": [
+    {"name": "project-memory", "version": ">=0.3.0", "url": "https://github.com/proteo5/long-term-memory-for-AI"}
+  ],
+  "tools": [{"name": "__NAME__.py", "network": false, "dependencies": []}],
+  "memory": {"kind": "local-sqlite", "append_only": true, "seed_version": "1"},
+  "privacy": {
+    "stays_local": ["<original documents>", "<direct identifiers>", "the memory file (the agent queries it and sees the answers)"],
+    "agent_sees": ["<the minimized data the job needs>", "query results", "what the owner types"],
+    "cannot_guarantee": ["<state your limits honestly, e.g. automatic anonymization is not infallible>"]
+  }
+}
