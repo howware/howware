@@ -345,7 +345,8 @@ Rendimiento con 50,000 movimientos: reportes agrupados en cerca de 1.5 segundos,
 **Lo que siguió.** Un segundo howware, [todo](https://github.com/howware/todo) (Getting Things Done), se construyó con
 el proceso de `howware-builder` y reutiliza el adaptador de memoria. Un tercero, [facturacion](https://github.com/howware/facturacion), combina el
 adaptador de estados de cuenta con uno nuevo para documentos del SAT: los depósitos que llegan al banco se vuelven
-las facturas por emitir.
+las facturas por emitir. Un cuarto, [arrendamiento](https://github.com/howware/arrendamiento) (rentas para caseros),
+comparte con ellos la misma memoria: aplica cada depósito de la renta al mes que paga, y la facturación lee ese mes.
 
 ## 13. Preguntas abiertas
 

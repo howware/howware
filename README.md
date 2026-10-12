@@ -90,6 +90,7 @@ python skills/howware-builder/scripts/new_howware.py --name car-maintenance \
 | [finanzas-personales](https://github.com/howware/finanzas-personales) | Personal finances: bank statements, categories that learn, budgets, card payments, monthly close |
 | [todo](https://github.com/howware/todo) | Getting Things Done without an app: capture, clarify, what to do now, weekly review — [how it was built](https://github.com/howware/todo/blob/main/docs/building.md) |
 | [facturacion](https://github.com/howware/facturacion) | Invoicing for Mexican freelancers: bank deposits become the invoices to issue, verified against what was stamped, through the declaration and its payment — [how it was built](https://github.com/howware/facturacion/blob/main/docs/building.md) |
+| [arrendamiento](https://github.com/howware/arrendamiento) | Rentals for landlords: rent checked against the bank statements and applied to the right month; services, property tax, repairs with warranties, the increase and the deposit in one list of what is pending — [how it was built](https://github.com/howware/arrendamiento/blob/main/docs/building.md) |
 
 Built one? Open a pull request to add it here — see [CONTRIBUTING](CONTRIBUTING.md).
 
@@ -100,7 +101,7 @@ Shared by howwares, each in its own repository ([specification §7](docs/spec.md
 | Adapter | Connects to | Used by |
 |---|---|---|
 | [project-memory](https://github.com/howware/long-term-memory-for-AI) | The owner's memory: a local, append-only SQLite store with history | Every howware |
-| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Mexican bank statements (PDF) → anonymized, reconciled JSON | finanzas-personales, facturacion |
+| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Mexican bank statements (PDF) → anonymized, reconciled JSON | finanzas-personales, facturacion, arrendamiento |
 | [mxsat](https://github.com/howware/mx-sat-documents) | SAT documents: CFDI invoices and declaration receipts, with personal data kept local | facturacion |
 
 ## Honest limits
