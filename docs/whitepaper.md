@@ -337,8 +337,10 @@ A fourth, [arrendamiento](https://github.com/howware/arrendamiento) (rentals for
 with them: it applies each rent deposit to the month it pays, and invoicing reads that month. A fifth,
 [repaso](https://github.com/howware/repaso) (spaced review), leaves money behind: the agent makes the cards, asks
 them and grades the owner's answers, while the tool schedules every review with FSRS. It needs only the memory.
-A sixth, [bitacora](https://github.com/howware/bitacora) (a bullet journal's habit trackers), keeps what the owner
-says they did and walks them through a monthly reflection; which trackers exist and their goals are the owner's data.
+A sixth, [bitacora](https://github.com/howware/bitacora) (a bullet journal), keeps what the owner
+says they did and what happened, and walks them through a monthly reflection; which trackers, types of note and
+collections exist are the owner's data. It shares its memory with `todo`: a to-do said in the journal goes to the
+GTD inbox.
 
 ## 13. Open questions
 

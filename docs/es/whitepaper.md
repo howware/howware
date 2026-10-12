@@ -350,9 +350,10 @@ comparte con ellos la misma memoria: aplica cada depósito de la renta al mes qu
 Un quinto, [repaso](https://github.com/howware/repaso) (repaso espaciado), deja atrás el dinero: el agente hace las
 tarjetas, las pregunta y califica las respuestas del dueño, mientras la herramienta programa cada repaso con FSRS.
 Solo necesita la memoria.
-Un sexto, [bitacora](https://github.com/howware/bitacora) (los trackers de hábitos de un bullet journal), guarda lo
-que el dueño dice que hizo y lo acompaña en una reflexión mensual; qué trackers existen y sus metas son datos del
-dueño.
+Un sexto, [bitacora](https://github.com/howware/bitacora) (un bullet journal), guarda lo
+que el dueño dice que hizo y lo que pasó, y lo acompaña en una reflexión mensual; qué trackers, tipos de nota y
+colecciones existen son datos del dueño. Comparte la memoria con `todo`: un pendiente dicho en la bitácora llega a la
+bandeja de GTD.
 
 ## 13. Preguntas abiertas
 

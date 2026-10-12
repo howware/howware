@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- New howware listed: [bitacora](https://github.com/howware/bitacora).
+- New howware listed: [bitacora](https://github.com/howware/bitacora) (0.2: notes, collections, a memory shared
+  with todo).
 - New howware listed: [repaso](https://github.com/howware/repaso).
 - New howware listed: [arrendamiento](https://github.com/howware/arrendamiento).
 - **Shared memory.** Specification 0.2 §8: several howwares may share one memory; records from an adapter are
