@@ -334,7 +334,9 @@ Performance with 50,000 transactions: grouped reports in about 1.5 seconds, incl
 with the `howware-builder` process and reuses the memory adapter. A third, [facturacion](https://github.com/howware/facturacion), combines the bank
 statement adapter with a new one for SAT documents: the deposits that reach the bank become the invoices to issue.
 A fourth, [arrendamiento](https://github.com/howware/arrendamiento) (rentals for landlords), shares the same memory
-with them: it applies each rent deposit to the month it pays, and invoicing reads that month.
+with them: it applies each rent deposit to the month it pays, and invoicing reads that month. A fifth,
+[repaso](https://github.com/howware/repaso) (spaced review), leaves money behind: the agent makes the cards, asks
+them and grades the owner's answers, while the tool schedules every review with FSRS. It needs only the memory.
 
 ## 13. Open questions
 

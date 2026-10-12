@@ -347,6 +347,9 @@ el proceso de `howware-builder` y reutiliza el adaptador de memoria. Un tercero,
 adaptador de estados de cuenta con uno nuevo para documentos del SAT: los depósitos que llegan al banco se vuelven
 las facturas por emitir. Un cuarto, [arrendamiento](https://github.com/howware/arrendamiento) (rentas para caseros),
 comparte con ellos la misma memoria: aplica cada depósito de la renta al mes que paga, y la facturación lee ese mes.
+Un quinto, [repaso](https://github.com/howware/repaso) (repaso espaciado), deja atrás el dinero: el agente hace las
+tarjetas, las pregunta y califica las respuestas del dueño, mientras la herramienta programa cada repaso con FSRS.
+Solo necesita la memoria.
 
 ## 13. Preguntas abiertas
 
