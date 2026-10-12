@@ -5,7 +5,7 @@ Commands (JSON on stdout, diagnostics on stderr, documented exit codes):
   record   record one item, idempotently (example of an exact write)
   report   totals for a period, computed by the memory (example of an exact read)
 
-Contract (howware spec §5): no network, no interactive prompts, secrets only from environment variables,
+Contract (howware spec §6): no network, no interactive prompts, secrets only from environment variables,
 idempotent writes, money in integer cents, refuse unsafe input with a clear error. Standard library only.
 
 Replace the example commands with the exact operations your howware needs. Keep judgment out of this file:

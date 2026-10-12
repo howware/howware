@@ -1,6 +1,6 @@
 ---
 name: howware-review
-description: Review a howware (or a project that wants to be one) against the howware specification and principles — manifest, protocol sections, exactness boundary, tool contract, memory conventions, privacy claims and tests. Use it when asked to review, audit or check a howware, its SKILL.md, its privacy statements, or whether a project qualifies as a howware.
+description: Review a howware (or a project that wants to be one) against the howware specification and principles — manifest, protocol sections, exactness boundary, tool contract, adapters, memory conventions, privacy claims and tests. Use it when asked to review, audit or check a howware, its SKILL.md, its privacy statements, or whether a project qualifies as a howware.
 ---
 
 # Reviewing a howware
@@ -21,13 +21,15 @@ report findings. You **don't change files** unless the person asks you to apply 
 
 ## Checklist
 
-### Manifest (spec §3)
+### Manifest (spec §4)
 - `howware.json` exists, parses, and has `howware`, `name`, `version`, `description`, `license`, `hosts`, `skill`,
   `tools`, `memory`, `privacy`.
-- `requires` lists every other tool or skill the protocol calls, with minimum versions.
+- `adapters` lists every adapter the protocol or the tools call, with minimum versions (0.1 manifests used
+  `requires`); `requires` lists other skills or howwares.
+- `hosts` lists only hosts it was actually tested on.
 - `tools[].network` matches the code (search for network calls); dependencies match imports.
 
-### Protocol (spec §4)
+### Protocol (spec §5)
 - Front matter `description` says which jobs it handles, in the owner's words.
 - Sections present: Rules, Cold start, Workflows, Exactness boundary, Approval, Presenting results.
 - **Exactness violations:** any instruction for the agent to add, convert, count, transcribe or parse by itself.
@@ -36,25 +38,32 @@ report findings. You **don't change files** unless the person asks you to apply 
 - Outward-facing actions (payments, messages, publishing) require an explicit request.
 - It is readable by a non-programmer.
 
-### Tools (spec §5)
+### Tools (spec §6)
 - JSON on stdout, diagnostics on stderr, errors as JSON with non-zero documented exit codes.
 - No interactive prompts; no undeclared network; secrets only from environment variables.
 - Idempotent writes (stable keys); refuses unsafe input; checks versions of what it depends on.
 - Money in integer minor units; no floats for money; dates timezone-safe.
 
-### Memory (spec §6)
+### Adapters (spec §2, §7)
+- The core reaches documents and stores only through adapters: no instruction to open sensitive files directly,
+  no tool that parses them itself.
+- Adapters hold no rules of this job; owner decisions come from the owner's data.
+- Each adapter used on sensitive sources pseudonymizes with an owner-held key and fails closed; its private store
+  (if any) is outside the repository and the protocol tells the owner how to keep it from the agent.
+
+### Memory (spec §8)
 - State lives outside the repository; history is kept (no silent overwrites).
 - The owner's rules are stored as data with their words as evidence.
 - High-volume record types are kept out of the session brief.
 
-### Privacy (spec §7)
+### Privacy (spec §9)
 - README publishes the three lists and they match the manifest.
 - **Overclaims:** flag absolute language ("never", "100 %", "nothing leaves", "no data", "completely private")
   unless strictly true for the whole system, including the AI provider. Propose precise wording.
-- Sensitive documents are processed locally before the agent sees anything.
+- Sensitive documents are processed locally, by adapters, before the agent sees anything.
 - A private-data guard runs in CI; fixtures are synthetic.
 
-### Tests (spec §8)
+### Tests (spec §10)
 - Tool tests with synthetic data, including refusals; CI runs them.
 - `tests/conversations.md` covers each workflow and each refusal.
 

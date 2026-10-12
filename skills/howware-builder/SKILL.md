@@ -1,12 +1,13 @@
 ---
 name: howware-builder
-description: Turn someone's know-how into a howware — a protocol, small exact tools and a memory, with the conversation as the interface, instead of an app. Use it when the person wants to automate a job, "make an app" for something they do, put their rules or process to work with AI, or create a new howware.
+description: Turn someone's know-how into a howware — a protocol, small exact tools, shared adapters and a memory, with the conversation as the interface, instead of an app. Use it when the person wants to automate a job, "make an app" for something they do, put their rules or process to work with AI, or create a new howware.
 ---
 
 # Building a howware
 
 A howware puts the owner's know-how to work through an AI agent: the rules in their words (protocol), only the
-exact operations as code (tools), their state in a memory they own, and the conversation as the interface. You
+exact operations as code (tools), shared adapters that connect it to documents and stores, their state in a memory
+they own, and the conversation as the interface. You
 help the **owner** become the author. You don't take their know-how away into code.
 
 Read the [manifesto](https://github.com/howware/howware/blob/main/MANIFESTO.md) and the
@@ -19,9 +20,10 @@ Read the [manifesto](https://github.com/howware/howware/blob/main/MANIFESTO.md) 
    you propose wording, they approve it.
 2. **Code only what must be exact.** If a wrong answer would be silent (parsing, money, dates, ids, storage), it
    goes in a tool with tests. If it's judgment, it goes in the protocol or the memory. Never move the owner's
-   rules into code.
+   rules into code, and never into an adapter.
 3. **No real data in the repository.** Fixtures and tests are synthetic. Never open the owner's sensitive
-   documents to "see the format": ask for a description or a made-up sample.
+   documents to "see the format": read them through an adapter, or ask for a description or a made-up sample.
+   When building an adapter, debug real documents only with masked shapes (`9` per digit, `X` per letter).
 4. **Say when not to.** If the job is visual, real-time, high-frequency, has no judgment in it, or must be
    certified software, tell the owner a howware is not the right tool and why.
 5. **Be honest about privacy.** Write the three privacy lists accurately; no absolute claims.
@@ -33,7 +35,8 @@ Ask in one or two messages, in the owner's language; skip what is already clear:
 
 - **The job.** What do you do, how often, and what result do you need? Tell me the last time you did it.
 - **The rules.** What decisions do you make? What are the exceptions? What do you check before trusting a result?
-- **The inputs.** What comes in (documents, exports, things you'd just say)? Are any sensitive?
+- **The inputs.** What comes in (documents, exports, things you'd just say)? Are any sensitive? Is there an
+  adapter for them already?
 - **The questions.** What would you ask if this worked perfectly? What should it remind you about?
 - **The exact parts.** Money, dates, counts, identifiers, deadlines — where would a mistake hurt?
 - **The host.** Claude Code, Codex or both? Which language?
@@ -50,7 +53,8 @@ Present, in plain language:
 | Part | Proposal |
 |---|---|
 | Protocol | The jobs (one workflow each), the non-negotiable rules, what to surface at the start |
-| Tools | Each exact operation, with its inputs and outputs. Reuse existing tools first (e.g. a statement reader, project-memory) |
+| Tools | Each exact operation of this job, with its inputs and outputs |
+| Adapters | The existing adapters it uses (project-memory, a statement reader, SAT documents…) and any new one it needs, as its own repository with no rules of the job |
 | Memory | What is stored: records, the owner's rules as data, money in cents, high-volume record types, saved questions |
 | Exactness boundary | A two-column table: what the tools do / what the agent decides |
 | Privacy | What stays local, what the agent sees, what cannot be guaranteed |
@@ -80,6 +84,14 @@ Replace the example commands with the exact operations from the design:
 - Refuse unsafe input with a clear message.
 - Tests with synthetic data for every command, including refusals.
 
+### New adapters
+
+If the job needs an adapter that doesn't exist, build it as a separate repository (specification §7): it reads
+or writes one kind of document, store or service; holds no rules of the job (decisions come from the owner's data,
+for example a template taken from a real document); pseudonymizes identifiers with a key the owner keeps in an
+environment variable; withholds its output if a personal value would get through; has a guide for agents, a
+private-data guard and synthetic tests. Check it with the owner's real documents only through its own output.
+
 ## 7. Seed the memory
 
 Edit `seed.json`: predicates (with units), starting entities, high-volume event types and saved questions the
@@ -87,8 +99,9 @@ owner will ask often.
 
 ## 8. Privacy and manifest
 
-Fill `howware.json` (requires, tools, memory, the three privacy lists) and the README's privacy section with the
-same content. Recommend host permissions that back the protocol's rules, with their limits.
+Fill `howware.json` (adapters, tools, memory, the three privacy lists) and the README's privacy section with the
+same content. Recommend host permissions that back the protocol's rules (for example, deny reading sensitive documents and
+adapters' private stores), with their limits.
 
 ## 9. Verify
 

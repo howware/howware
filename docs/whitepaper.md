@@ -2,7 +2,7 @@
 
 **A whitepaper on putting know-how to work with AI, without building an app**
 
-*Version 0.1 · October 2026 · [Leer en español](es/whitepaper.md)*
+*Version 0.2 · October 2026 · [Leer en español](es/whitepaper.md)*
 
 ---
 
@@ -15,8 +15,9 @@ Both are slow and expensive, and every new rule makes them more so.
 
 AI agents that can follow written instructions, run local tools and hold a conversation make a different path
 possible. The person writes the know-how as a **protocol** in their own words; only the operations that must be
-exact become small **tools**; the person's state lives in a **memory** they own; and the **conversation** is the
-interface. We call the result **howware**.
+exact become small **tools**; reusable **adapters** connect them to documents and data stores, keeping personal
+data at the edge; the person's state lives in a **memory** they own; and the **conversation** is the interface. We
+call the result **howware**.
 
 This paper defines the term, places it after the spreadsheet in the history of end-user computing, describes its
 anatomy and principles, lists the patterns and anti-patterns found while building the first howware — personal
@@ -48,7 +49,7 @@ Very little of that is the job. The job is the know-how.
 *Hardware runs it. Software executes it. Howware knows how.*
 
 A **howware** (the noun is also countable: *a finance howware*, *two howwares*) is a concrete artifact: a
-protocol, a set of tools and a memory convention, installed into an agent host such as Claude Code or Codex. It
+protocol, a set of tools, the adapters it uses and a memory convention, installed into an agent host such as Claude Code or Codex. It
 can be versioned, tested, shared, audited and composed like any other software.
 
 ## 3. The next step after the spreadsheet
@@ -80,14 +81,17 @@ flowchart LR
     P([Person]) <-- conversation --> A[Agent host<br/>Claude Code · Codex]
     PR[Protocol<br/>the know-how, in words] -. teaches .-> A
     A -- runs --> T[Tools<br/>small · exact · local]
-    T <--> M[(Memory<br/>owned by the person)]
-    A -- queries --> M
+    A -- runs --> AD[Adapters<br/>documents · memory · services]
+    T --> AD
+    AD <--> M[(Memory<br/>owned by the person)]
+    AD <--> D[/Documents/]
 ```
 
 | Part | Holds | Written in | Must be |
 |---|---|---|---|
 | **Protocol** | Know-how: steps, criteria, what to ask, what never to do, how to present results | Natural language (a skill file) | Readable by the person who owns the know-how; specific; testable by conversation |
-| **Tools** | Operations that must be exact: parsing, arithmetic, identifiers, storage, validation | Code | Small, deterministic, offline, machine-readable output, explicit errors |
+| **Tools** | The exact operations of this job: arithmetic, dates, identifiers, validation | Code, in the howware | Small, deterministic, offline, machine-readable output, explicit errors |
+| **Adapters** | Access to the environment: reading documents, the memory store, services | Code, in its own repository | Reusable by many howwares; no rules of any job; personal data removed at the edge |
 | **Memory** | The person's state, the rules they taught, and history | A local store with a stable schema | Owned by the person, portable, append-only or versioned |
 | **Conversation** | The interface | The person's own words | — |
 
@@ -109,7 +113,7 @@ Neither requires code. Code is reserved for the exactness boundary.
 
 ### 4.2 The exactness boundary
 
-| Goes in a **tool** (code) | Goes in the **protocol** or the **memory** (words) |
+| Goes in a **tool** or an **adapter** (code) | Goes in the **protocol** or the **memory** (words) |
 |---|---|
 | Parsing a document format | Which documents to ask for |
 | Sums, balances, money in minor units | What a number means and whether it matters |
@@ -121,6 +125,26 @@ Neither requires code. Code is reserved for the exactness boundary.
 
 Rule of thumb: **if a wrong answer would be silent, it belongs in a tool.** If it would be visible and the person
 could correct it in conversation, it can be words.
+
+### 4.3 Adapters: the edge
+
+The code splits in two. **Tools** belong to one howware and do the exact operations of its job. **Adapters** are
+shared: they connect howwares to the environment (a bank's statement format, the SAT's invoices, the memory's
+database, one day an e-mail server or a company system), in the same way that ports and adapters keep the core of
+a clean architecture unaware of where it runs. Three rules make the split useful:
+
+1. **Adapters hold no rules of a job.** A SAT documents adapter does not know that an export of services is taxed
+   at 0 %; it copies that from a template taken from an invoice the person already issued. Decisions stay with
+   the person and in the core.
+2. **Privacy is protected at the edge.** The adapter that opens a sensitive document is the one that removes or
+   pseudonymizes personal data, before the agent sees anything, and it withholds its output rather than leak.
+3. **The core reaches the environment only through adapters.** The protocol says which adapter to run; tools
+   call adapters instead of opening files or databases themselves.
+
+Because adapters are shared, a new howware often needs no new adapter, and a new adapter makes new howwares
+possible: [mxbank](https://github.com/howware/mx-bank-statement-reader) serves personal finance and invoicing;
+[mxsat](https://github.com/howware/mx-sat-documents) serves invoicing; the
+[memory](https://github.com/howware/long-term-memory-for-AI) serves all of them.
 
 ## 5. Principles
 
@@ -250,7 +274,7 @@ it is a candidate for howware.
 | Vibe coding | An app, with AI writing the code | Whoever prompts, then developers maintain it | Code written by AI |
 | Chatbot | A conversation over a model's knowledge | Nobody, specifically | The model |
 | Agent frameworks | Agents, by developers | Developers | Code orchestrating models |
-| **Howware** | **A protocol + small tools + a memory convention** | **The person with the know-how** | **Words (judgment) + tools (exactness)** |
+| **Howware** | **A protocol + small tools + shared adapters + a memory convention** | **The person with the know-how** | **Words (judgment) + tools (exactness)** |
 
 ## 11. From personal to teams and enterprise
 
@@ -263,6 +287,7 @@ software raises questions this project intends to explore in the open:
 | Identity | The owner | Who is speaking? Mapping the conversation to an identity |
 | Memory | One local file | Shared state, concurrency, residency, backups |
 | Permissions | The host asks before running tools | Per-role access to tools and data; least privilege |
+| Integration | Adapters for local documents and the memory | Adapters for e-mail, company databases and internal systems, with per-role access |
 | Process | The protocol | Versioned processes with roles, approvals and deadlines |
 | Audit | Append-only history with author and evidence | Compliance-grade trails across people and agents |
 | Quality | Tests on tools; conversations checked by hand | Regression evaluation of protocols across model versions |
@@ -280,9 +305,10 @@ the next experiments must show.
 | Part | Implementation |
 |---|---|
 | Protocol | `SKILL.md`: cold start, import, categories (12 fixed groups; subcategories proposed and approved), cash, budgets, card payments, monthly close, presentation and privacy rules |
-| Tools | [mxbank](https://github.com/howware/mx-bank-statement-reader) (statement PDF → anonymized, reconciled JSON with stable ids) and `fin.py` (≈600 lines, standard library only) |
+| Tools | `fin.py` (≈600 lines, standard library only): import, categories, budgets, reports |
+| Adapters | [mxbank](https://github.com/howware/mx-bank-statement-reader) (statement PDF → anonymized, reconciled JSON with stable ids) and the memory |
 | Memory | [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI): local SQLite, append-only, facts with validity, saved queries |
-| Hosts | Claude Code and Codex |
+| Hosts | Claude Code (Codex not yet tested) |
 
 **Rules that never needed code.** Everything the person teaches is data in the memory, created in conversation:
 merchant categories ("OXXO is groceries"), new subcategories, one-off exceptions ("that Amazon purchase was a
@@ -297,6 +323,10 @@ a day shift before noon dates, a re-categorization that would have required rewr
 entities, and a privacy claim that had to be rewritten because it promised more than the system could guarantee.
 
 Performance with 50,000 transactions: grouped reports in about 1.5 seconds, including process start.
+
+**What came next.** A second howware, [todo](https://github.com/howware/todo) (Getting Things Done), was built
+with the `howware-builder` process and reuses the memory adapter. A third, for invoicing, combines the bank
+statement adapter with a new one for SAT documents: the deposits that reach the bank become the invoices to issue.
 
 ## 13. Open questions
 

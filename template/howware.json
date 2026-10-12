@@ -1,13 +1,13 @@
 {
-  "howware": "0.1",
+  "howware": "0.2",
   "name": "__NAME__",
   "version": "0.1.0",
   "description": "__DESCRIPTION__",
   "license": "Apache-2.0",
   "languages": ["en"],
-  "hosts": ["claude-code", "codex"],
+  "hosts": [],
   "skill": "skill/__NAME__",
-  "requires": [
+  "adapters": [
     {"name": "project-memory", "version": ">=0.3.0", "url": "https://github.com/howware/long-term-memory-for-AI"}
   ],
   "tools": [{"name": "__NAME__.py", "network": false, "dependencies": []}],

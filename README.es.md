@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/howware/howware/actions/workflows/ci.yml"><img src="https://github.com/howware/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <img src="https://img.shields.io/badge/especificación-0.1-blue" alt="Especificación 0.1">
+  <img src="https://img.shields.io/badge/especificación-0.2-blue" alt="Especificación 0.2">
   <img src="https://img.shields.io/badge/código-Apache%202.0-green" alt="Código: Apache 2.0">
   <img src="https://img.shields.io/badge/textos-CC%20BY%204.0-green" alt="Textos: CC BY 4.0">
 </p>
@@ -45,7 +45,8 @@ agente de IA haciendo el trabajo.
 | Parte | Qué es |
 |---|---|
 | **Protocolo** | Tu saber hacer en palabras claras: pasos, criterios, reglas, qué preguntar, qué nunca hacer |
-| **Herramientas** | Programas pequeños para lo que debe ser exacto: leer documentos, dinero, fechas, almacenamiento |
+| **Herramientas** | Programas pequeños para las operaciones exactas del trabajo: dinero, fechas, reportes |
+| **Adaptadores** | Programas compartidos que conectan a los howwares con tus documentos y datos, y dejan los datos personales en el borde |
 | **Memoria** | Tus datos y las reglas que enseñas, en un lugar tuyo, con historia |
 | **Conversación** | La única interfaz |
 
@@ -64,7 +65,7 @@ Este repositorio incluye dos skills para Claude Code y Codex:
 
 | Skill | Hace |
 |---|---|
-| [`howware-builder`](skills/howware-builder/SKILL.md) | Te entrevista sobre tu trabajo y construye contigo un howware: diseño, protocolo, herramientas, memoria, pruebas |
+| [`howware-builder`](skills/howware-builder/SKILL.md) | Te entrevista sobre tu trabajo y construye contigo un howware: diseño, protocolo, herramientas, adaptadores, memoria, pruebas |
 | [`howware-review`](skills/howware-review/SKILL.md) | Revisa un howware contra la especificación, incluidas sus promesas de privacidad |
 
 ```bash
@@ -73,8 +74,8 @@ python howware/tools/install_skills.py                              # Claude Cod
 python howware/tools/install_skills.py --target-dir ~/.codex/skills  # Codex
 ```
 
-Las herramientas que crea un howware usan [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI)
-como memoria; instala también su skill `project-memory`. Luego dile a tu agente: *«Quiero convertir la forma en que
+Los howwares usan [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI) como adaptador de
+memoria; instala también su skill `project-memory`. Luego dile a tu agente: *«Quiero convertir la forma en que
 <hago algo> en un howware.»*
 
 ¿Prefieres empezar a mano? La [plantilla](template/) es el esqueleto completo de un howware que funciona:
@@ -92,6 +93,16 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 | [todo](https://github.com/howware/todo) | Getting Things Done sin app: capturar, aclarar, qué hacer ahora, revisión semanal; [cómo se construyó](https://github.com/howware/todo/blob/main/docs/building.md) |
 
 ¿Construiste uno? Abre un pull request para agregarlo aquí; ver [CONTRIBUTING](CONTRIBUTING.md).
+
+## Adaptadores
+
+Los comparten los howwares; cada uno vive en su propio repositorio ([especificación §7](docs/es/especificacion.md#7-adaptadores)):
+
+| Adaptador | Conecta con | Lo usan |
+|---|---|---|
+| [project-memory](https://github.com/howware/long-term-memory-for-AI) | La memoria del dueño: un almacén SQLite local, solo de agregado, con historia | Todos los howwares |
+| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Estados de cuenta de bancos mexicanos (PDF) → JSON anonimizado y conciliado | finanzas-personales, facturación (en construcción) |
+| [mxsat](https://github.com/howware/mx-sat-documents) | Documentos del SAT: facturas CFDI y acuses de declaración, con los datos personales en tu computadora | facturación (en construcción) |
 
 ## Límites honestos
 

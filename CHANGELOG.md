@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Adapters.** Specification 0.2: the term *adapter* (a shared program that connects howwares to documents,
+  stores and services, with no rules of any job), an Architecture section (core, tools, adapters, after ports and
+  adapters / clean architecture) with three rules, a new §7 for adapters, and the manifest field `adapters`
+  (0.1 manifests used `requires`; both are accepted). Whitepaper 0.2 (§4.3 "Adapters: the edge"), manifesto,
+  READMEs, skills and template updated to match. New adapter listed:
+  [mxsat](https://github.com/howware/mx-sat-documents) for SAT documents.
+- Whitepaper case study: hosts now say Claude Code only (Codex not yet tested), matching the manifest.
 - Template: adds `LICENSE`, `SECURITY.md` and `.gitattributes`, which the specification lists and the template
   lacked (found while building the `todo` howware).
 - New howware listed: [todo](https://github.com/howware/todo).

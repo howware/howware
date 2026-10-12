@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/howware/howware/actions/workflows/ci.yml"><img src="https://github.com/howware/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <img src="https://img.shields.io/badge/spec-0.1-blue" alt="Spec 0.1">
+  <img src="https://img.shields.io/badge/spec-0.2-blue" alt="Spec 0.2">
   <img src="https://img.shields.io/badge/code-Apache%202.0-green" alt="Code: Apache 2.0">
   <img src="https://img.shields.io/badge/texts-CC%20BY%204.0-green" alt="Texts: CC BY 4.0">
 </p>
@@ -43,7 +43,8 @@ of a grid, tools that read your documents instead of copy and paste, and an AI a
 | Part | What it is |
 |---|---|
 | **Protocol** | Your know-how in plain words: steps, criteria, rules, what to ask, what never to do |
-| **Tools** | Small programs for whatever must be exact: reading documents, money, dates, storage |
+| **Tools** | Small programs for the exact operations of the job: money, dates, reports |
+| **Adapters** | Shared programs that connect howwares to your documents and data, keeping personal data at the edge |
 | **Memory** | Your data and the rules you teach, in a place you own, with history |
 | **Conversation** | The only interface |
 
@@ -62,7 +63,7 @@ This repository includes two skills for Claude Code and Codex:
 
 | Skill | Does |
 |---|---|
-| [`howware-builder`](skills/howware-builder/SKILL.md) | Interviews you about your job and builds a howware with you: design, protocol, tools, memory, tests |
+| [`howware-builder`](skills/howware-builder/SKILL.md) | Interviews you about your job and builds a howware with you: design, protocol, tools, adapters, memory, tests |
 | [`howware-review`](skills/howware-review/SKILL.md) | Reviews a howware against the specification, including privacy claims |
 
 ```bash
@@ -71,8 +72,8 @@ python howware/tools/install_skills.py                              # Claude Cod
 python howware/tools/install_skills.py --target-dir ~/.codex/skills  # Codex
 ```
 
-The tools a howware creates use [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI)
-as their memory; install its `project-memory` skill too. Then tell your agent: *"I want to turn the way I
+Howwares use [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI) as their memory
+adapter; install its `project-memory` skill too. Then tell your agent: *"I want to turn the way I
 <do something> into a howware."*
 
 Prefer to start by hand? The [template](template/) is a complete, working howware skeleton:
@@ -90,6 +91,16 @@ python skills/howware-builder/scripts/new_howware.py --name car-maintenance \
 | [todo](https://github.com/howware/todo) | Getting Things Done without an app: capture, clarify, what to do now, weekly review — [how it was built](https://github.com/howware/todo/blob/main/docs/building.md) |
 
 Built one? Open a pull request to add it here — see [CONTRIBUTING](CONTRIBUTING.md).
+
+## Adapters
+
+Shared by howwares, each in its own repository ([specification §7](docs/spec.md#7-adapters)):
+
+| Adapter | Connects to | Used by |
+|---|---|---|
+| [project-memory](https://github.com/howware/long-term-memory-for-AI) | The owner's memory: a local, append-only SQLite store with history | Every howware |
+| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Mexican bank statements (PDF) → anonymized, reconciled JSON | finanzas-personales, invoicing (in progress) |
+| [mxsat](https://github.com/howware/mx-sat-documents) | SAT documents: CFDI invoices and declaration receipts, with personal data kept local | invoicing (in progress) |
 
 ## Honest limits
 

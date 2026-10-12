@@ -41,12 +41,13 @@ Howware is the next step:
 
 ## Anatomy
 
-Every howware has four parts:
+Every howware has five parts:
 
 | Part | What it is | Example (personal finance) |
 |---|---|---|
 | **Protocol** | The know-how in natural language: steps, criteria, rules, what to ask and what never to do | `SKILL.md`: how to import, how to propose categories, what is not spending |
-| **Tools** | Small, deterministic programs for whatever must be exact | Read a bank statement, add cents, keep stable ids |
+| **Tools** | Small, deterministic programs for the exact operations of the job | Add cents, budgets, monthly reports |
+| **Adapters** | Shared programs that connect howwares to documents and stores, removing personal data at the edge | Read a bank statement without the owner's identity; the memory store |
 | **Memory** | The person's state, owned by them, with history | A local, append-only SQLite file |
 | **Conversation** | The only interface | "How am I doing with my grocery budget?" |
 
@@ -77,10 +78,10 @@ not part of a web page.
    and give the agent only what it needs. Then say plainly what you cannot guarantee. A privacy promise that
    isn't true is worse than none.
 
-8. **Small enough to audit.** The protocol is a text file. The tools are short, with few or no dependencies.
+8. **Small enough to audit.** The protocol is a text file. Tools and adapters are short, with few dependencies.
    Anyone should be able to read the whole thing and verify what it claims.
 
-9. **Composable and open.** Each tool is useful on its own and replaceable. A howware is a combination of open
+9. **Composable and open.** Each adapter is useful on its own, shared by many howwares, and replaceable. A howware is a combination of open
    pieces, not a sealed product.
 
 ## Honest limits

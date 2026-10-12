@@ -41,12 +41,13 @@ El howware es el siguiente paso:
 
 ## Anatomía
 
-Todo howware tiene cuatro partes:
+Todo howware tiene cinco partes:
 
 | Parte | Qué es | Ejemplo (finanzas personales) |
 |---|---|---|
 | **Protocolo** | El saber hacer en lenguaje natural: pasos, criterios, reglas, qué preguntar y qué nunca hacer | `SKILL.md`: cómo importar, cómo proponer categorías, qué no es gasto |
-| **Herramientas** | Programas pequeños y deterministas para lo que debe ser exacto | Leer un estado de cuenta, sumar centavos, mantener ids estables |
+| **Herramientas** | Programas pequeños y deterministas para las operaciones exactas del trabajo | Sumar centavos, presupuestos, reportes del mes |
+| **Adaptadores** | Programas compartidos que conectan a los howwares con documentos y almacenes, y quitan los datos personales en el borde | Leer un estado de cuenta sin la identidad del dueño; el almacén de la memoria |
 | **Memoria** | El estado de la persona, suyo, con historia | Un archivo SQLite local que solo agrega |
 | **Conversación** | La única interfaz | «¿Cómo voy con el presupuesto de súper?» |
 
@@ -78,10 +79,10 @@ de una página web.
    sensibles localmente y dale al agente solo lo que necesita. Luego di con claridad lo que no puedes garantizar.
    Una promesa de privacidad que no es cierta es peor que ninguna.
 
-8. **Tan pequeño que se pueda auditar.** El protocolo es un archivo de texto. Las herramientas son cortas, con
-   pocas o ninguna dependencia. Cualquiera debería poder leerlo todo y comprobar lo que promete.
+8. **Tan pequeño que se pueda auditar.** El protocolo es un archivo de texto. Las herramientas y los adaptadores
+   son cortos, con pocas dependencias. Cualquiera debería poder leerlo todo y comprobar lo que promete.
 
-9. **Componible y abierto.** Cada herramienta sirve por sí sola y se puede reemplazar. Un howware es una
+9. **Componible y abierto.** Cada adaptador sirve por sí solo, lo comparten varios howwares y se puede reemplazar. Un howware es una
    combinación de piezas abiertas, no un producto sellado.
 
 ## Límites honestos

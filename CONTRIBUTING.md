@@ -6,6 +6,8 @@ Howware is an open idea. Contributions in English or Spanish are welcome.
 
 - **Add a howware to the list.** Open a pull request adding a row to the "Howwares" table in both READMEs. It
   should have a `howware.json`, state its privacy limits honestly, and pass a `howware-review`.
+- **Add an adapter.** A shared program that connects howwares to a kind of document, store or service
+  (specification §7). It lives in its own repository; open a pull request adding it to the "Adapters" table.
 - **Counter-examples.** Jobs where howware failed or an app was clearly better make the whitepaper's "when not to"
   section stronger. Open an issue.
 - **Patterns.** Found a pattern or anti-pattern while building a howware? Propose it with the failure it solved.

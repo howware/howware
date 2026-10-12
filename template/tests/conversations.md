@@ -1,6 +1,6 @@
 # Conversation scenarios
 
-Checked by hand before each release (howware spec §8). Each scenario: what the owner says, and what the agent
+Checked by hand before each release (howware spec §10). Each scenario: what the owner says, and what the agent
 must and must not do. Use synthetic data.
 
 | # | The owner says | The agent must | The agent must not |

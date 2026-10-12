@@ -7,7 +7,7 @@ description: __DESCRIPTION__ Use it when the person asks to <list the jobs, in t
 
 <!-- A howware protocol: the know-how, in plain words. Write it so the owner can read and change it.
      Rules of the job go here. Rules the owner teaches (categories, limits, names) go in the memory as data.
-     Sections marked REQUIRED follow the howware specification §4. -->
+     Sections marked REQUIRED follow the howware specification §5. -->
 
 `TOOL` = `python "<this skill's folder>/scripts/__NAME__.py"`; `MEM` = the project-memory helper.
 Run both from the owner's folder. All output is JSON.
