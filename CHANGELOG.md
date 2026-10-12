@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **Shared memory.** Specification 0.2 §8: several howwares may share one memory; records from an adapter are
+  written in the form the adapter documents, keyed by its stable ids and without interpretation; each howware
+  stores its own reading beside them and never changes them; no howware requires another only to get shared
+  records. Whitepaper §4.3 explains it. Backed by project-memory 0.4.0 (a resent record gains the links it
+  lacks) and mxbank 0.3.0 (`mxbank records`).
 - **Adapters.** Specification 0.2: the term *adapter* (a shared program that connects howwares to documents,
   stores and services, with no rules of any job), an Architecture section (core, tools, adapters, after ports and
   adapters / clean architecture) with three rules, a new §7 for adapters, and the manifest field `adapters`

@@ -150,6 +150,13 @@ nuevo hace posibles otros howwares: [mxbank](https://github.com/howware/mx-bank-
 finanzas personales y a la facturación; [mxsat](https://github.com/howware/mx-sat-documents) sirve a la
 facturación; la [memoria](https://github.com/howware/long-term-memory-for-AI) sirve a todos.
 
+Los howwares que comparten una memoria comparten los registros que traen los adaptadores. Un movimiento bancario
+se guarda una sola vez, en la forma que documenta su adaptador y con la clave estable del adaptador, sin importar
+qué howware lo importó primero; cada howware agrega a su lado su propia lectura (finanzas personales una
+categoría, arrendamiento el mes de renta que cubre, facturación la factura que lo cobró). Así una persona puede
+instalar solo el howware que necesita, o varios sobre los mismos datos, y ninguno tiene que estar instalado para
+que otro funcione.
+
 ## 5. Principios
 
 El [manifiesto](../../MANIFIESTO.md) enuncia nueve principios:

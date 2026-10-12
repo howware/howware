@@ -158,6 +158,16 @@ Además de §6, un adaptador:
 - Los registros de alto volumen DEBERÍAN quedar fuera del resumen de inicio de sesión.
 - Las preguntas repetidas DEBERÍAN guardarse como consultas con nombre y parámetros.
 
+Varios howwares PUEDEN compartir una memoria (finanzas personales, facturación y arrendamiento sobre los mismos
+estados de cuenta). En ese caso:
+
+- Los registros que vienen de un adaptador (un movimiento bancario, una factura) DEBERÍAN escribirse en la forma
+  que documenta el adaptador, con sus claves estables y sin interpretación, para que cualquiera de ellos pueda
+  importar la fuente y ninguno la duplique.
+- Cada howware DEBERÍA guardar su propia lectura de un registro compartido (una categoría, el mes de renta que
+  cubre, la factura que lo cobró) como vínculos, hechos o eventos propios, y NO DEBE cambiar el registro compartido.
+- Un howware NO DEBERÍA requerir otro howware solo para obtener registros compartidos: los importa él mismo.
+
 ## 9. Privacidad
 
 Un howware DEBE:

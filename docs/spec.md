@@ -174,6 +174,15 @@ In addition to §6, an adapter:
 - High-volume records SHOULD be kept out of the session brief.
 - Repeated questions SHOULD be saved as named, parameterized queries.
 
+Several howwares MAY share one memory (personal finance, invoicing and rentals on the same bank statements). Then:
+
+- Records that come from an adapter (a bank transaction, an invoice) SHOULD be written in the form the adapter
+  documents, keyed by its stable ids and without interpretation, so any of them can import the source and none
+  duplicates it.
+- Each howware SHOULD store its own reading of a shared record (a category, the month of rent it covers, the
+  invoice that billed it) as its own links, facts or events, and MUST NOT change the shared record.
+- A howware SHOULD NOT require another howware only to get shared records: it imports them itself.
+
 ## 9. Privacy
 
 A howware MUST:

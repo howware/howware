@@ -146,6 +146,12 @@ possible: [mxbank](https://github.com/howware/mx-bank-statement-reader) serves p
 [mxsat](https://github.com/howware/mx-sat-documents) serves invoicing; the
 [memory](https://github.com/howware/long-term-memory-for-AI) serves all of them.
 
+Howwares that share a memory share the records adapters bring in. A bank transaction is stored once, in the form
+its adapter documents and keyed by the adapter's stable id, whichever howware imported it first; each howware then
+adds its own reading beside it (personal finance a category, rentals the month of rent it covers, invoicing the
+invoice that billed it). So a person can install only the howware they need, or several on the same data, and none
+has to be installed for another to work.
+
 ## 5. Principles
 
 The [manifesto](../MANIFESTO.md) states nine principles:
