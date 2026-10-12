@@ -8,6 +8,8 @@
   (0.1 manifests used `requires`; both are accepted). Whitepaper 0.2 (§4.3 "Adapters: the edge"), manifesto,
   READMEs, skills and template updated to match. New adapter listed:
   [mxsat](https://github.com/howware/mx-sat-documents) for SAT documents.
+- Template guard: in English like the rest of the template; blocks invoice XMLs and the `mxsat-private/`
+  store; allows the SAT's public generic RFCs (found while building the `facturacion` howware).
 - Whitepaper case study: hosts now say Claude Code only (Codex not yet tested), matching the manifest.
 - Template: adds `LICENSE`, `SECURITY.md` and `.gitattributes`, which the specification lists and the template
   lacked (found while building the `todo` howware).
