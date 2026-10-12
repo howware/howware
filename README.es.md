@@ -94,6 +94,7 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 | [facturacion](https://github.com/howware/facturacion) | Facturación para independientes en México: los depósitos del banco se vuelven las facturas por emitir, verificadas contra lo timbrado, hasta la declaración y su pago; [cómo se construyó](https://github.com/howware/facturacion/blob/main/docs/building.md) |
 | [arrendamiento](https://github.com/howware/arrendamiento) | Rentas para caseros: la renta revisada contra los estados de cuenta y aplicada al mes que corresponde; servicios, predial, reparaciones con garantía, el incremento y el depósito en una sola lista de pendientes; [cómo se construyó](https://github.com/howware/arrendamiento/blob/main/docs/building.md) |
 | [repaso](https://github.com/howware/repaso) | Aprender y no olvidar: el agente hace las tarjetas, te pregunta unos minutos al día, califica tus respuestas dichas con tus palabras y programa cada repaso con FSRS; planes de estudio para temas largos, una racha sin culpa; [cómo se construyó](https://github.com/howware/repaso/blob/main/docs/building.md) |
+| [bitacora](https://github.com/howware/bitacora) | Trackers de hábitos y reflexión mensual, como un bullet journal sin app: dices lo que hiciste; rachas, la cuadrícula del mes y una revisión guiada donde decides qué sigue; [cómo se construyó](https://github.com/howware/bitacora/blob/main/docs/building.md) |
 
 ¿Construiste uno? Abre un pull request para agregarlo aquí; ver [CONTRIBUTING](CONTRIBUTING.md).
 
