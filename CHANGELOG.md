@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- New howware listed: [eventos-sociales](https://github.com/howware/eventos-sociales).
 - New howware listed: [bitacora](https://github.com/howware/bitacora) (0.2: notes, collections, a memory shared
   with todo).
 - New howware listed: [repaso](https://github.com/howware/repaso).

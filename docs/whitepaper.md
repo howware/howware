@@ -341,6 +341,9 @@ A sixth, [bitacora](https://github.com/howware/bitacora) (a bullet journal), kee
 says they did and what happened, and walks them through a monthly reflection; which trackers, types of note and
 collections exist are the owner's data. It shares its memory with `todo`: a to-do said in the journal goes to the
 GTD inbox.
+A seventh, [eventos-sociales](https://github.com/howware/eventos-sociales) (a social events planner), plans a wedding from a countdown
+template: each step is due relative to the event day, and the couple or the wedding planner adds, moves and drops
+steps; budget, payments, sponsors, guests and tables are kept exact by its tool.
 
 ## 13. Open questions
 

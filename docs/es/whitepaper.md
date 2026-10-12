@@ -354,6 +354,10 @@ Un sexto, [bitacora](https://github.com/howware/bitacora) (un bullet journal), g
 que el dueño dice que hizo y lo que pasó, y lo acompaña en una reflexión mensual; qué trackers, tipos de nota y
 colecciones existen son datos del dueño. Comparte la memoria con `todo`: un pendiente dicho en la bitácora llega a la
 bandeja de GTD.
+Un séptimo, [eventos-sociales](https://github.com/howware/eventos-sociales) (un planner de eventos sociales), planea una boda desde una
+plantilla con cuenta regresiva: cada paso vence en relación con el día del evento, y la pareja o el wedding planner
+agregan, mueven y quitan pasos; el presupuesto, los pagos, los padrinos, los invitados y las mesas los lleva exactos
+su herramienta.
 
 ## 13. Preguntas abiertas
 
