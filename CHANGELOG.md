@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Template: adds `LICENSE`, `SECURITY.md` and `.gitattributes`, which the specification lists and the template
+  lacked (found while building the `todo` howware).
+- New howware listed: [todo](https://github.com/howware/todo).
+
 ## 0.1.0 — first public version
 
 - The term: **howware** — your know-how, put to work by AI. Manifesto in English and Spanish.

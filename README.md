@@ -87,6 +87,7 @@ python skills/howware-builder/scripts/new_howware.py --name car-maintenance \
 | Howware | Job |
 |---|---|
 | [finanzas-personales](https://github.com/howware/finanzas-personales) | Personal finances: bank statements, categories that learn, budgets, card payments, monthly close |
+| [todo](https://github.com/howware/todo) | Getting Things Done without an app: capture, clarify, what to do now, weekly review — [how it was built](https://github.com/howware/todo/blob/main/docs/building.md) |
 
 Built one? Open a pull request to add it here — see [CONTRIBUTING](CONTRIBUTING.md).
 

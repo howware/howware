@@ -89,6 +89,7 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 | Howware | Trabajo |
 |---|---|
 | [finanzas-personales](https://github.com/howware/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes |
+| [todo](https://github.com/howware/todo) | Getting Things Done sin app: capturar, aclarar, qué hacer ahora, revisión semanal; [cómo se construyó](https://github.com/howware/todo/blob/main/docs/building.md) |
 
 ¿Construiste uno? Abre un pull request para agregarlo aquí; ver [CONTRIBUTING](CONTRIBUTING.md).
 
