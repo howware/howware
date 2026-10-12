@@ -103,7 +103,7 @@ de una página web.
 
 ## El primer howware
 
-[finanzas-personales](https://github.com/proteo5/finanzas-personales) lleva las finanzas personales —importar
+[finanzas-personales](https://github.com/howware/finanzas-personales) lleva las finanzas personales —importar
 estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes— sin app: un protocolo
 para Claude Code o Codex, un lector de estados de cuenta que elimina los datos personales en la computadora de la
 persona y una memoria local.

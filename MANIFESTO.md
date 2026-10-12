@@ -102,7 +102,7 @@ not part of a web page.
 
 ## The first howware
 
-[finanzas-personales](https://github.com/proteo5/finanzas-personales) handles personal finances — importing
+[finanzas-personales](https://github.com/howware/finanzas-personales) handles personal finances — importing
 bank statements, categories that learn, budgets, card payments, monthly close — with no app: a protocol for
 Claude Code or Codex, a bank statement reader that removes personal data on the person's computer, and a local
 memory.

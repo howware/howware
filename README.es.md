@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/proteo5/howware/actions/workflows/ci.yml"><img src="https://github.com/proteo5/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/howware/howware/actions/workflows/ci.yml"><img src="https://github.com/howware/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/especificación-0.1-blue" alt="Especificación 0.1">
   <img src="https://img.shields.io/badge/código-Apache%202.0-green" alt="Código: Apache 2.0">
   <img src="https://img.shields.io/badge/textos-CC%20BY%204.0-green" alt="Textos: CC BY 4.0">
@@ -68,12 +68,12 @@ Este repositorio incluye dos skills para Claude Code y Codex:
 | [`howware-review`](skills/howware-review/SKILL.md) | Revisa un howware contra la especificación, incluidas sus promesas de privacidad |
 
 ```bash
-git clone https://github.com/proteo5/howware
+git clone https://github.com/howware/howware
 python howware/tools/install_skills.py                              # Claude Code
 python howware/tools/install_skills.py --target-dir ~/.codex/skills  # Codex
 ```
 
-Las herramientas que crea un howware usan [Long-Term Memory for AI](https://github.com/proteo5/long-term-memory-for-AI)
+Las herramientas que crea un howware usan [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI)
 como memoria; instala también su skill `project-memory`. Luego dile a tu agente: *«Quiero convertir la forma en que
 <hago algo> en un howware.»*
 
@@ -88,7 +88,7 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 
 | Howware | Trabajo |
 |---|---|
-| [finanzas-personales](https://github.com/proteo5/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes |
+| [finanzas-personales](https://github.com/howware/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes |
 
 ¿Construiste uno? Abre un pull request para agregarlo aquí; ver [CONTRIBUTING](CONTRIBUTING.md).
 

@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/proteo5/howware/actions/workflows/ci.yml"><img src="https://github.com/proteo5/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/howware/howware/actions/workflows/ci.yml"><img src="https://github.com/howware/howware/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/spec-0.1-blue" alt="Spec 0.1">
   <img src="https://img.shields.io/badge/code-Apache%202.0-green" alt="Code: Apache 2.0">
   <img src="https://img.shields.io/badge/texts-CC%20BY%204.0-green" alt="Texts: CC BY 4.0">
@@ -66,12 +66,12 @@ This repository includes two skills for Claude Code and Codex:
 | [`howware-review`](skills/howware-review/SKILL.md) | Reviews a howware against the specification, including privacy claims |
 
 ```bash
-git clone https://github.com/proteo5/howware
+git clone https://github.com/howware/howware
 python howware/tools/install_skills.py                              # Claude Code
 python howware/tools/install_skills.py --target-dir ~/.codex/skills  # Codex
 ```
 
-The tools a howware creates use [Long-Term Memory for AI](https://github.com/proteo5/long-term-memory-for-AI)
+The tools a howware creates use [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI)
 as their memory; install its `project-memory` skill too. Then tell your agent: *"I want to turn the way I
 <do something> into a howware."*
 
@@ -86,7 +86,7 @@ python skills/howware-builder/scripts/new_howware.py --name car-maintenance \
 
 | Howware | Job |
 |---|---|
-| [finanzas-personales](https://github.com/proteo5/finanzas-personales) | Personal finances: bank statements, categories that learn, budgets, card payments, monthly close |
+| [finanzas-personales](https://github.com/howware/finanzas-personales) | Personal finances: bank statements, categories that learn, budgets, card payments, monthly close |
 
 Built one? Open a pull request to add it here — see [CONTRIBUTING](CONTRIBUTING.md).
 
@@ -113,11 +113,10 @@ docs/whitepaper.md · docs/es/   the whitepaper (English, Spanish)
 docs/spec.md · docs/es/         the specification
 skills/                          howware-builder, howware-review
 template/                        a working howware skeleton
-site/                            howware.org
 ```
 
 ## License
 
 Code (skills' scripts, template, tools) under [Apache 2.0](LICENSE). Texts (manifesto, whitepaper,
-specification, site) under [CC BY 4.0](LICENSE-docs.md): use them, translate them, build on them, and say where
+specification; the site in [howware.github.io](https://github.com/howware/howware.github.io)) under [CC BY 4.0](LICENSE-docs.md): use them, translate them, build on them, and say where
 they came from.

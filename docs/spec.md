@@ -49,8 +49,8 @@ Every howware MUST include a manifest at the repository root:
   "hosts": ["claude-code", "codex"],
   "skill": "skill/finanzas-personales",
   "requires": [
-    {"name": "mxbank", "version": ">=0.2.0", "url": "https://github.com/proteo5/mx-bank-statement-reader"},
-    {"name": "project-memory", "version": ">=0.3.0", "url": "https://github.com/proteo5/long-term-memory-for-AI"}
+    {"name": "mxbank", "version": ">=0.2.0", "url": "https://github.com/howware/mx-bank-statement-reader"},
+    {"name": "project-memory", "version": ">=0.3.0", "url": "https://github.com/howware/long-term-memory-for-AI"}
   ],
   "tools": [{"name": "fin.py", "network": false, "dependencies": []}],
   "memory": {"kind": "local-sqlite", "append_only": true, "seed_version": "2"},

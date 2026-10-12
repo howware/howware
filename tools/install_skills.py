@@ -30,7 +30,7 @@ def main() -> int:
         if name == "howware-builder":
             shutil.copytree(ROOT / "template", target / "template", ignore=IGNORE)
         print(f"Installed {name} in {target}")
-    print("The template's tools need the project-memory skill: https://github.com/proteo5/long-term-memory-for-AI")
+    print("The template's tools need the project-memory skill: https://github.com/howware/long-term-memory-for-AI")
     return 0
 
 

@@ -138,7 +138,7 @@ The [manifesto](../MANIFESTO.md) states nine principles:
 
 ## 6. Patterns
 
-These come from building [finanzas-personales](https://github.com/proteo5/finanzas-personales). Each one solved
+These come from building [finanzas-personales](https://github.com/howware/finanzas-personales). Each one solved
 a real failure.
 
 **P1 · Extract locally, before the model.** Sensitive documents are processed by a local tool that outputs only
@@ -275,13 +275,13 @@ the next experiments must show.
 
 ## 12. Case study: personal finance without an app
 
-[finanzas-personales](https://github.com/proteo5/finanzas-personales) is the reference howware.
+[finanzas-personales](https://github.com/howware/finanzas-personales) is the reference howware.
 
 | Part | Implementation |
 |---|---|
 | Protocol | `SKILL.md`: cold start, import, categories (12 fixed groups; subcategories proposed and approved), cash, budgets, card payments, monthly close, presentation and privacy rules |
-| Tools | [mxbank](https://github.com/proteo5/mx-bank-statement-reader) (statement PDF → anonymized, reconciled JSON with stable ids) and `fin.py` (≈600 lines, standard library only) |
-| Memory | [Long-Term Memory for AI](https://github.com/proteo5/long-term-memory-for-AI): local SQLite, append-only, facts with validity, saved queries |
+| Tools | [mxbank](https://github.com/howware/mx-bank-statement-reader) (statement PDF → anonymized, reconciled JSON with stable ids) and `fin.py` (≈600 lines, standard library only) |
+| Memory | [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI): local SQLite, append-only, facts with validity, saved queries |
 | Hosts | Claude Code and Codex |
 
 **Rules that never needed code.** Everything the person teaches is data in the memory, created in conversation:
@@ -314,9 +314,9 @@ These are invitations. Howware is an open idea; contributions, counter-examples 
 
 - [The Howware Manifesto](../MANIFESTO.md)
 - [Howware specification](spec.md)
-- [finanzas-personales](https://github.com/proteo5/finanzas-personales) — reference howware
-- [mx-bank-statement-reader](https://github.com/proteo5/mx-bank-statement-reader) — local extraction tool
-- [Long-Term Memory for AI](https://github.com/proteo5/long-term-memory-for-AI) — memory
+- [finanzas-personales](https://github.com/howware/finanzas-personales) — reference howware
+- [mx-bank-statement-reader](https://github.com/howware/mx-bank-statement-reader) — local extraction tool
+- [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI) — memory
 
 ---
 

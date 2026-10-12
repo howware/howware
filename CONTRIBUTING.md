@@ -22,7 +22,7 @@ Howware is an open idea. Contributions in English or Spanish are welcome.
 ## Development
 
 ```bash
-git clone https://github.com/proteo5/long-term-memory-for-AI ../long-term-memory-for-AI
+git clone https://github.com/howware/long-term-memory-for-AI ../long-term-memory-for-AI
 python -m unittest discover -s tests -v
 git ls-files -z | xargs -0 python tools/check_private_data.py
 ```

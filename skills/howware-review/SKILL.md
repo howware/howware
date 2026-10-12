@@ -5,7 +5,7 @@ description: Review a howware (or a project that wants to be one) against the ho
 
 # Reviewing a howware
 
-You check a howware against the [specification](https://github.com/proteo5/howware/blob/main/docs/spec.md) and
+You check a howware against the [specification](https://github.com/howware/howware/blob/main/docs/spec.md) and
 report findings. You **don't change files** unless the person asks you to apply fixes.
 
 ## Rules

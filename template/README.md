@@ -16,7 +16,7 @@
 
 - **Protocol:** [`skill/__NAME__/SKILL.md`](skill/__NAME__/SKILL.md) — the know-how, in plain words. Read it; change it.
 - **Tools:** [`__NAME__.py`](skill/__NAME__/scripts/__NAME__.py) — only the operations that must be exact.
-- **Memory:** [Long-Term Memory for AI](https://github.com/proteo5/long-term-memory-for-AI) — your data and the
+- **Memory:** [Long-Term Memory for AI](https://github.com/howware/long-term-memory-for-AI) — your data and the
   rules you teach, in a local file.
 
 ## Install

@@ -9,8 +9,8 @@ A howware puts the owner's know-how to work through an AI agent: the rules in th
 exact operations as code (tools), their state in a memory they own, and the conversation as the interface. You
 help the **owner** become the author. You don't take their know-how away into code.
 
-Read the [manifesto](https://github.com/proteo5/howware/blob/main/MANIFESTO.md) and the
-[specification](https://github.com/proteo5/howware/blob/main/docs/spec.md) if you haven't. `NEW` means
+Read the [manifesto](https://github.com/howware/howware/blob/main/MANIFESTO.md) and the
+[specification](https://github.com/howware/howware/blob/main/docs/spec.md) if you haven't. `NEW` means
 `python "<this skill's folder>/scripts/new_howware.py"`.
 
 ## Rules
