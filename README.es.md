@@ -89,7 +89,7 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 
 | Howware | Trabajo |
 |---|---|
-| [finanzas-personales](https://github.com/howware/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes |
+| [finanzas-personales](https://github.com/howware/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes, y un módulo opcional de créditos, pronóstico y plan para liquidar deudas |
 | [todo](https://github.com/howware/todo) | Getting Things Done sin app: capturar, aclarar, qué hacer ahora, revisión semanal; [cómo se construyó](https://github.com/howware/todo/blob/main/docs/building.md) |
 | [facturacion](https://github.com/howware/facturacion) | Facturación para independientes en México: los depósitos del banco se vuelven las facturas por emitir, verificadas contra lo timbrado, hasta la declaración y su pago; [cómo se construyó](https://github.com/howware/facturacion/blob/main/docs/building.md) |
 | [arrendamiento](https://github.com/howware/arrendamiento) | Rentas para caseros: la renta revisada contra los estados de cuenta y aplicada al mes que corresponde; servicios, predial, reparaciones con garantía, el incremento y el depósito en una sola lista de pendientes; [cómo se construyó](https://github.com/howware/arrendamiento/blob/main/docs/building.md) |
