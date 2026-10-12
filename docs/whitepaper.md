@@ -325,7 +325,7 @@ entities, and a privacy claim that had to be rewritten because it promised more 
 Performance with 50,000 transactions: grouped reports in about 1.5 seconds, including process start.
 
 **What came next.** A second howware, [todo](https://github.com/howware/todo) (Getting Things Done), was built
-with the `howware-builder` process and reuses the memory adapter. A third, for invoicing, combines the bank
+with the `howware-builder` process and reuses the memory adapter. A third, [facturacion](https://github.com/howware/facturacion), combines the bank
 statement adapter with a new one for SAT documents: the deposits that reach the bank become the invoices to issue.
 
 ## 13. Open questions

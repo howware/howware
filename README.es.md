@@ -91,6 +91,7 @@ python skills/howware-builder/scripts/new_howware.py --name mantenimiento-auto \
 |---|---|
 | [finanzas-personales](https://github.com/howware/finanzas-personales) | Finanzas personales: estados de cuenta, categorías que aprenden, presupuestos, pagos de tarjeta, cierre de mes |
 | [todo](https://github.com/howware/todo) | Getting Things Done sin app: capturar, aclarar, qué hacer ahora, revisión semanal; [cómo se construyó](https://github.com/howware/todo/blob/main/docs/building.md) |
+| [facturacion](https://github.com/howware/facturacion) | Facturación para independientes en México: los depósitos del banco se vuelven las facturas por emitir, verificadas contra lo timbrado, hasta la declaración y su pago; [cómo se construyó](https://github.com/howware/facturacion/blob/main/docs/building.md) |
 
 ¿Construiste uno? Abre un pull request para agregarlo aquí; ver [CONTRIBUTING](CONTRIBUTING.md).
 
@@ -101,8 +102,8 @@ Los comparten los howwares; cada uno vive en su propio repositorio ([especificac
 | Adaptador | Conecta con | Lo usan |
 |---|---|---|
 | [project-memory](https://github.com/howware/long-term-memory-for-AI) | La memoria del dueño: un almacén SQLite local, solo de agregado, con historia | Todos los howwares |
-| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Estados de cuenta de bancos mexicanos (PDF) → JSON anonimizado y conciliado | finanzas-personales, facturación (en construcción) |
-| [mxsat](https://github.com/howware/mx-sat-documents) | Documentos del SAT: facturas CFDI y acuses de declaración, con los datos personales en tu computadora | facturación (en construcción) |
+| [mxbank](https://github.com/howware/mx-bank-statement-reader) | Estados de cuenta de bancos mexicanos (PDF) → JSON anonimizado y conciliado | finanzas-personales, facturacion |
+| [mxsat](https://github.com/howware/mx-sat-documents) | Documentos del SAT: facturas CFDI y acuses de declaración, con los datos personales en tu computadora | facturacion |
 
 ## Límites honestos
 
